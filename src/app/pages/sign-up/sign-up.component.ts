@@ -18,9 +18,10 @@ export class SignUpComponent implements OnInit {
   }
 
   onSignUp() {
-    this.userService.signUp(this.nickname).subscribe(() => {
+    this.userService.userSubject.subscribe(() => {
       this.router.navigate(['/'])
     })
+    this.userService.signUp(this.nickname)
   }
 
 }

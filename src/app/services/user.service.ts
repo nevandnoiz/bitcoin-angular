@@ -26,9 +26,7 @@ export class UserService {
       coins: 100,
       moves: []
     }
-
     this.storageService.saveToStorage('user', user);
-
     this.userSubject.next(user);
   }
 
