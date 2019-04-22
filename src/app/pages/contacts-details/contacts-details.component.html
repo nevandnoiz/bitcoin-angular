@@ -1,0 +1,16 @@
+<div class="details-page">
+    <div class="details-nav">
+        <button class="return-button"><i class="fas fa-arrow-left" (click)="toList()"></i></button>
+        <button class="edit-button"><i class="fas fa-pencil-alt" (click)="toEdit()"></i></button>
+    </div>
+    <div class="details-container">
+        <img src="https://robohash.org/{{contact._id}}" />
+        <div class="info-container">
+            <h1>{{contact.name}}</h1>
+            <h2>Email: {{contact.email}}</h2>
+            <h2>Phone: {{contact.phone}}</h2>
+        </div>
+    </div>
+    <app-transfer-fund [contact]="contact"></app-transfer-fund>
+    <app-moves-list [contact]="contact"></app-moves-list>
+</div>

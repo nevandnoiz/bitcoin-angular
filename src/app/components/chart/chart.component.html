@@ -1,0 +1,5 @@
+<div class="chart-container" *ngIf="loaded">
+  <h1>{{title}}</h1>
+    <google-chart #chart [title]="title" [type]="type" [data]="data" [options]="options"></google-chart>  
+  <h2>{{description}}</h2>
+</div>

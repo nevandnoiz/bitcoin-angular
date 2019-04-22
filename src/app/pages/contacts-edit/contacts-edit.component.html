@@ -1,0 +1,16 @@
+<div class="edit-page">
+    <div class="edit-nav">
+        <button class="return-button"><i class="fas fa-arrow-left"
+                (click)="isCreate? toList() : toDetails()"></i></button>
+        <button class="trash-button" *ngIf="!isCreate" (click)="onDelete()"><i class="fas fa-trash"></i></button>
+    </div>
+    <div class="edit-container">
+        <img src="https://robohash.org/{{isCreate? 0 : contact._id}}" />
+        <form (submit)="onSubmit($event)">
+            <input name="name" [(ngModel)]="contact.name" type="text" placeholder="Name" />
+            <input name="email" [(ngModel)]="contact.email" type="text" placeholder="Email" />
+            <input name="phone" [(ngModel)]="contact.phone" type="text" placeholder="Phone" />
+            <button>Done</button>
+        </form>
+    </div>
+</div>

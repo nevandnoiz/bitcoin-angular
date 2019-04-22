@@ -1,0 +1,8 @@
+<div class="moves-list" *ngIf="moves.length>0">
+    <h1>Your moves:</h1>
+    <div class="move-container" *ngFor="let move of moves">
+        At: {{move.at}}
+        <br />
+        Amount: {{move.amount}} coins
+    </div>
+</div>

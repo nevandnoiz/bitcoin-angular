@@ -1,0 +1,6 @@
+<div class="transfer-container">
+    <h1>Transfer coins to {{move.to}}:</h1>
+    <div class="transfer-form">Amount: <input type="text" name="amount" (input)="digitsValidation($event)"
+            [(ngModel)]="move.amount" />
+        <button (click)="onTransfer()">Transfer</button></div>
+</div>
